@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./CSS/Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="./JS/bar_chart.js" defer></script>
+    <script src="./JS/Script.js" defer></script>
+</head>
+
+<body>
+    <div class="left-sidebar">
+        <div class="lsb-top">
+            <a href="#" class="iconBx-m" id="logo">
+                <i class="fa-brands fa-accusoft"></i>
+            </a>
+            <a href="#" class="iconBx-m">
+                <i class="fa-solid fa-table-cells-large"></i>
+            </a>
+            <a href="#" class="iconBx-m">
+                <i class="fa-solid fa-plus"></i>
+            </a>
+            <a href="#" class="iconBx-m">
+                <i class="fa-solid fa-chart-line"></i>
+            </a>
+            <a href="#" class="iconBx-m">
+                <i class="fa-solid fa-comment-dots"></i>
+            </a>
+            <a href="#" class="iconBx-m">
+                <i class="fa-solid fa-users"></i>
+            </a>
+        </div>
+        <div class="lsb-bottom">
+            <a href="#" class="iconBx-m">
+                <i class="fa-solid fa-bell"></i>
+            </a>
+            <a href="#" class="iconBx-m">
+                <i class="fa-solid fa-gear"></i>
+            </a>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="mc-header">
+            <div class="nav-arrows">
+                <div class="iconBx-m arrow">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="iconBx-m arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="iconBx-m arrow toggle">
+                    <i class="fa-solid fa-bars menu"></i>
+                    <i class="fa-solid fa-times close"></i>
+                </div>
+            </div>
+            <a href="#" class="btn btn-blue">finish sprint</a>
+        </div>
+        <div class="sprint-overview">
+            <div class="title">
+                <h1>Sprint Overview</h1>
+                <a href="#" class="btn">last sprint</a>
+            </div>
+            <div class="sprint-overview-cards">
+                <div class="sprint-overview-card">
+                    <i class="fas fa-tachometer-alt icon-1"></i>
+                    <p>Team Velocity</p>
+                    <h5>53</h5>
+                </div>
+                <div class="sprint-overview-card">
+                    <i class="fas fa-user icon-1"></i>
+                    <p>Team Members</p>
+                    <h5>11</h5>
+                </div>
+                <div class="sprint-overview-card">
+                    <i class="fas fa-suitcase icon-1"></i>
+                    <p>Tasks Delivered</p>
+                    <h5>22</h5>
+                </div>
+                <div class="sprint-overview-card">
+                    <i class="fas fa-search icon-1"></i>
+                    <p>Spikes Deliverd</p>
+                    <h5>24</h5>
+                </div>
+                <div class="sprint-overview-card">
+                    <i class="fas fa-globe-americas icon-1"></i>
+                    <p>News Events</p>
+                    <h5>17</h5>
+                </div>
+            </div>
+        </div>
+        <div class="charts-stories">
+            <div class="burnsown-chart-container">
+                <h1>Burnsown Chart</h1>
+                <div class="burnsown-chart">
+                    <canvas id="myChart" height="100"></canvas>
+                </div>
+            </div>
+            <div class="sprint-stories-container">
+                <div class="title">
+                    <h1>Sprint Stories</h1>
+                    <a href="#" class="btn">See All</a>
+                </div>
+                <div class="sprint-stories">
+                    <table>
+                        <tr>
+                            <td>S11</td>
+                            <td>Landing Page</td>
+                            <td>Delivered</td>
+                            <td>12</td>
+                            <td><i class="fas fa-ellipsis-h"></i></td>
+                        </tr>
+                        <tr>
+                            <td>S32</td>
+                            <td>On Boarding</td>
+                            <td>Delivered</td>
+                            <td>3</td>
+                            <td><i class="fas fa-ellipsis-h"></i></td>
+                        </tr>
+                        <tr>
+                            <td>S12</td>
+                            <td>User Profile</td>
+                            <td>Approved</td>
+                            <td>9</td>
+                            <td><i class="fas fa-ellipsis-h"></i></td>
+                        </tr>
+                        <tr>
+                            <td>S21</td>
+                            <td>Settings</td>
+                            <td>Approved</td>
+                            <td>3</td>
+                            <td><i class="fas fa-ellipsis-h"></i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="team-members-container">
+            <div class="title">
+                <h1>Team Members</h1>
+                <a href="#" class="btn">Add Member</a>
+            </div>
+            <div class="team-members">
+                <div class="team-member">
+                    <div class="imgBx">
+                        <img src="./CSS/Images/jhon.jpg">
+                    </div>
+                    <div class="member-content">
+                        <h2>Jhon</h2>
+                        <p>35 Story Points</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="imgBx">
+                        <img src="./CSS/Images/nisha.jpg">
+                    </div>
+                    <div class="member-content">
+                        <h2>Nisha</h2>
+                        <p>5 Story Points</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="imgBx">
+                        <img src="./CSS/Images/mike.jpg">
+                    </div>
+                    <div class="member-content">
+                        <h2>Mike</h2>
+                        <p>12 Story Points</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="imgBx">
+                        <img src="./CSS/Images/kim.jpg">
+                    </div>
+                    <div class="member-content">
+                        <h2>kim</h2>
+                        <p>26 Story Points</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-sidebar">
+        <div class="epics-container">
+            <div class="title">
+                <h1>Epics</h1>
+                <a href="#" class="btn">See All</a>
+            </div>
+            <div class="epics">
+                <div class="epic">
+                    <div class="imgBx-s green">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <div class="epic-info">
+                        <h2>Admin Panel</h2>
+                        <p>Design & Development</p>
+                    </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="epic">
+                    <div class="imgBx-s red">
+                        <i class="fas fa-address-card"></i>
+                    </div>
+                    <div class="epic-info">
+                        <h2>Adding Item</h2>
+                        <p>Development</p>
+                    </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="epic">
+                    <div class="imgBx-s violet">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="epic-info">
+                        <h2>Mobile Onboarding</h2>
+                        <p>Design</p>
+                    </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="epic">
+                    <div class="imgBx-s blue">
+                        <i class="fab fa-phoenix-squadron"></i>
+                    </div>
+                    <div class="epic-info">
+                        <h2>Mobile MVP</h2>
+                        <p>Design</p>
+                    </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="epic">
+                    <div class="imgBx-s purple">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <div class="epic-info">
+                        <h2>QR Scan</h2>
+                        <p>Research</p>
+                    </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+        <div class="project-statistic-container">
+            <div class="title">
+                <h1>Project Statistic</h1>
+            </div>
+            <div class="project-statistics">
+                <div class="project-statistic">
+                    <h2>Project</h2>
+                    <p>Progress</p>
+                    <div class="progress">
+                        <div class="stat-progress-cover">
+                            <div id="project"></div>
+                        </div>
+                        <h2>75%</h2>
+                    </div>
+                </div>
+                <div class="project-statistic">
+                    <h2>Business</h2>
+                    <p>Goals</p>
+                    <div class="progress">
+                        <div class="stat-progress-cover">
+                            <div id="business"></div>
+                        </div>
+                        <h2>42%</h2>
+                    </div>
+                </div>
+                <div class="project-statistic">
+                    <h2>Budget</h2>
+                    <p>Used</p>
+                    <div class="progress">
+                        <div class="stat-progress-cover">
+                            <div id="budget"></div>
+                        </div>
+                        <h2>40%</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn project-details">Project Details</a>
+    </div>
+</body>
+
+</html>
